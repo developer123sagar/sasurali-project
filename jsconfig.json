@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "constant": ["src/constant/*"],
+      "toast": ["src/Toast/*"],
+      "admin": ["src/admin/*"]
+    }
+  },
+  "include": ["src"]
+}

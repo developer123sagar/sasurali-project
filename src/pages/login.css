@@ -1,0 +1,94 @@
+/* Left half */
+.body {
+    height: 100%;
+}
+
+.formContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.formContainer .mainLogo {
+    margin-left: 35% !important;
+    align-items: center;
+    height: 140px;
+    width: 200px;
+}
+
+.formContainer h2 {
+    margin-bottom: 30px;
+}
+
+.formContainer .stLogo {
+    width: 130px;
+}
+
+.poweredByContainer {
+    display: flex;
+    align-items: center;
+}
+
+.poweredByContainer h5 {
+    margin-right: -20px;
+}
+
+.formContainer label {
+    margin-bottom: 10px;
+    text-align: left !important;
+}
+
+.formContainer input {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+
+.formContainer button {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.formContainer .checkBoxContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formContainer .checkBoxContainer>span {
+    display: inline;
+}
+
+.formContainer .checkBoxContainer>span>input {
+    height: 20px;
+    width: 20px;
+}
+
+.formContainer .checkBoxContainer>span>label {
+    margin-left: 5px;
+}
+
+.image {
+    background: url("../../public/sasurali.jpg");
+    background-position: center;
+    background-size: cover; /* or background-size: contain; */
+    height: 100vh;
+}
+
+
+
+/*Media queries*/
+@media only screen and (max-width: 767px) {
+    .image {
+        display: none;
+    }
+}

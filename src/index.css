@@ -1,0 +1,549 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+.h {
+    border: 1px solid red;
+}
+body{
+    background-color:#f0f8ff;
+}
+.theme-color{
+background-color: #eb0029;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration-line: none !important;
+}
+
+:root {
+    --theme-color: #eb0029;
+    --theme-color2: #ff9d2d;
+    --title-color: #010f1c;
+    --body-color: #4d5765;
+    --smoke-color: rgba(1, 15, 28, 0.06);
+    --smoke-color2: #F9F6F1;
+    --black-color: #000000;
+    --black-color2: #4B4B4B;
+    --gray-color: #bdbdbd;
+    --white-color: #ffffff;
+    --light-color: #72849b;
+    --yellow-color: #ffb539;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: var(--title-font);
+}
+
+.customNav {
+    background-color: var(--title-color);
+}
+
+.custom-top-nav {
+    background-color: var(--theme-color);
+}
+
+@media screen and (min-width: 1024px) {
+    .custom-top-nav {
+        border-bottom-left-radius: 19px;
+    }
+}
+
+
+
+@media screen and (min-width: 1280px) {
+    .custom-top-nav {
+        border-bottom-left-radius: 26px;
+    }
+}
+
+.custom-top-nav2 {
+    background-color:blue;
+    clip-path: polygon(0 0, 19% 100%, 7% 0);
+}
+
+.nav::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #DC143C;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition: 0.5s;
+}
+
+.nav:hover::after {
+    width: 100%;
+}
+
+.nav {
+    position: relative;
+}
+
+.nav:hover {
+    color: hsl(39, 96%, 51%);
+    cursor: pointer;
+}
+
+.custom-reservation-btn {
+    background: var(--theme-color);
+    position: relative;
+}
+
+.custom-reservation-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    transition: width .3s ease-in-out;
+}
+
+.custom-reservation-btn:hover::after {
+    width: 100%;
+}
+
+.custom-reservation-btn>* {
+    position: relative;
+    z-index: 2;
+    transition: color .3s ease-in-out;
+}
+
+.custom-reservation-btn:hover>* {
+    color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7791b3;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.753);
+}
+
+
+/* navbar and button background */
+.background {
+    background: red;
+    /* background: linear-gradient(90deg, rgba(69, 18, 15, 1) 67%, rgba(77, 47, 36, 1) 100%); */
+}
+
+/* dropdown bg */
+.dropdownBg {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(219, 151, 151, 1) 0%, rgba(69, 18, 15, 1) 55%, rgba(69, 18, 15, 1) 100%);
+}
+
+/* drawer background */
+.drawerBg {
+    background: rgb(195, 53, 34);
+    background: #fff;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+}
+
+.customh1{
+    color:black;
+   padding-top: 18px;
+     font-weight: bold;
+     
+  
+      font-size:16px;
+      padding-bottom: 20px;
+      
+     
+    
+}
+.animate-border {
+    position: relative;
+    display: block;
+    width: 115px;
+    height: 3px;
+    background: #007bff; }
+  
+  .animate-border:after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+    -webkit-animation: animborder 2s linear infinite;
+    animation: animborder 2s linear infinite; }
+    @-webkit-keyframes animborder {
+        0% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px); }
+        100% {
+          -webkit-transform: translateX(113px);
+          transform: translateX(113px); } }
+      
+      @keyframes animborder {
+        0% {
+          -webkit-transform: translateX(0px);
+          transform: translateX(0px); }
+        100% {
+          -webkit-transform: translateX(113px);
+          transform: translateX(113px); } }
+      
+      .animate-border.border-white:after {
+        border-color: #fff; }
+      
+      .animate-border.border-yellow:after {
+        border-color: #F5B02E; }
+      
+      .animate-border.border-orange:after {
+        border-right-color: #007bff;
+        border-left-color: #007bff; }
+      
+      .animate-border.border-ash:after {
+        border-right-color: #EEF0EF;
+        border-left-color: #EEF0EF; }
+      
+      .animate-border.border-offwhite:after {
+        border-right-color: #F7F9F8;
+        border-left-color: #F7F9F8; }
+      
+        p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+  color:white;
+    line-height: 28px;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.hrs {
+    /* w-64 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient */
+    width: 64;
+    color: red;
+    background-color: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(172, 15, 81, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    ;
+
+}
+
+.Icon {
+    color: #A5A5A5;
+    padding-left: 12px;
+    padding-top: 8px;
+}
+
+.admin-header {
+    background: #ffffff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+.admins-header{
+    background:#f0f8ff;
+    box-shadow: 0 0 20px 0 rgba(4, 4, 4, 0.1);
+
+}
+
+.fonts {
+    font-family: "Rubik", sans-serif;
+
+}
+.box-shadow{
+    box-shadow: 0px 0px 30px rgba(242, 246, 244, 0.12);
+}
+.h1{
+color: #010f1c;
+    font-size: 24px;
+    font-weight: 900;
+    /* font-family: "Rubik", sans-serif; */
+}
+#spanh1{
+    color:#ff0600;
+    font-size:26px;
+    font-weight:600;
+    font-style: normal;
+}
+.spanh2{
+    color:#fff;
+    font-size:32px;
+    font-weight:600;
+   
+}
+.food-menu_img {
+   
+    width: 92px;
+    height: 92px;
+    margin-left: auto;
+    border-radius: 100%;
+    border-width: 3px;
+    position: relative;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background: var(--white-color);
+  
+    padding: 5px;
+    z-index: 2;
+    margin-right: 10px;
+}
+.clippath{
+    
+    clip-path: polygon(0 6%, 0 0, 100% 0);
+background-color:#eb0029;
+min-width:200px;
+
+
+}
+.hides{
+    display:none;
+}
+.Show:hover+ .hides{
+    display: block;
+  
+}
+.Show:hover+ .hides + .hides1
+{
+    display:block;
+}
+.section-space{
+    margin-top: 30px;
+}
+.inputs{
+    padding:20px;
+    width:99%;
+color:#fff;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    text-align: center;
+   
+border-color: black;
+outline: none;
+}
+.booking{
+    background-position: left center;
+}
+.transitions{
+    transition-duration:50s ;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+/* admin header */
+.admin-header {
+    background:#fff;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+}
+.boxshadow{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    background:black;
+}
+
+/* home page animation part  */
+.hero-home {
+    background-image: url('./image/sasuralibanners.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 90vh;
+}
+
+@media screen and (max-width: 600px) {
+    .hero-home {
+        height: 50vh;
+    }
+}
+
+.heading-home {
+    background: url('./image/text_pattern.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.home-title {
+    font-family: var(--style-font);
+}
+.facebook{
+    background-color:#1877F2;
+    width: 30px;
+    height:30px;
+    border-radius: 100%;
+}
+.Instagram{
+    background-color:#E4405F;
+    width: 30px;
+    height:30px;
+    border-radius: 100%;
+}
+.whatsapp{
+    background-color: #25D366;
+    width: 30px;
+    height:30px;
+    border-radius: 100%;
+}
+
+
+.box-shadow{
+    box-shadow: 0px 0px 30px rgba(242, 246, 244, 0.12);
+}
+.h1{
+color: #010f1c;
+    font-size: 24px;
+    font-weight: 900;
+    /* font-family: "Rubik", sans-serif; */
+}
+.spanh1{
+    color:#eb0029;
+    font-size:20px;
+    font-weight:600;
+    font-family: "Lobster Two", cursive;
+}
+.food-menu_img {
+    min-width: 92px;
+    width: 92px;
+    height: 92px;
+    border-radius: 100%;
+    position: relative;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background: var(--white-color);
+  
+    padding: 5px;
+    z-index: 2;
+    margin-right: 10px;
+}
+
+  
+
+@keyframes roundImage {
+    0% {
+      border-radius: 0;
+    }
+    100% {
+      border-radius: 50%;
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .image-spin {
+    animation: spin 3s linear infinite;
+    -webkit-animation: spin 60s linear infinite
+  }
+ 
+ .hr{
+margin-top: 12px;
+ }
+ .icon-element{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #ef4444; /* Equivalent to bg-red-700 in Tailwind CSS */
+    text-align: center;
+ }
+ .socialmedia{
+    width: 40px; /* Equivalent to w-10 in Tailwind CSS */
+    height: 40px; /* Equivalent to h-10 in Tailwind CSS */
+    border-radius: 9999px; /* Equivalent to rounded-full in Tailwind CSS */
+   /* Equivalent to bg-white in Tailwind CSS */
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .socialmedia:hover{
+    background-color: #c11111;
+ }
+ .socialmedia1{
+    width: 30px; /* Equivalent to w-10 in Tailwind CSS */
+    height: 30px; /* Equivalent to h-10 in Tailwind CSS */
+    border-radius: 9999px; /* Equivalent to rounded-full in Tailwind CSS */
+    background-color: #c11111; /* Equivalent to bg-white in Tailwind CSS */
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .shape-mockup
+ {
+   
+    z-index:-1;
+    
+ }
+ .jump{
+    animation: jumpAni 7s linear infinite;
+
+    
+  
+ }
+ .moving{
+   right:20%;
+  
+    animation: moving 8s linear infinite;
+    
+/*     
+    right:17%;
+    top:80%; */
+}
+
+.animated-image {
+    animation: slideFromTop 5s ease-in-out  alternate infinite; /* Apply the animation */
+  }
+  
+  @keyframes slideFromTop {
+    0% {
+      transform: translateY(-50%); /* Initial position: hidden above */
+      opacity: 0; /* Start with opacity 0 */
+    }
+    80% {
+      transform: translateY(0); /* Final position: visible */
+      opacity: 1; /* Fade in */
+    }
+  }
+  @keyframes scrolling {
+    0%, 100% {
+      transform: translateX(-10%);
+    }
+    50% {
+      transform: translateX(20%);
+    }
+  }
+
+  .animate-scrolling {
+    animation: scrolling 5s linear infinite;
+  }
+ 
